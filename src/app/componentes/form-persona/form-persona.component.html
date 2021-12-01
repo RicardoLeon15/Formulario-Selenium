@@ -1,0 +1,51 @@
+<form [formGroup]="validar" class="mb-4">
+    <div class="input-group input-group-lg mt-4 mb-4">
+        <input type="text" [(ngModel)]="persona.nombre" formControlName="nombre" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="nombre"
+            placeholder="Nombre" [ngClass]="{ 'is-invalid':submitted && f['nombre'].errors }">
+        <span style="position:absolute; right:8px;top:8px;" class="fa fa-address-card fa-2x"></span>
+        <div *ngIf="submitted && f['nombre'].errors" class="invalid-feedback">
+            <div *ngIf="f['nombre'].errors['required']">Debes introducir tu nombre.</div>
+        </div>
+    </div>
+    <div class="input-group input-group-lg mt-4 mb-4">
+        <input type="text" [(ngModel)]="persona.paterno" formControlName="paterno" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="paterno"
+            placeholder="Apellido Paterno" [ngClass]="{ 'is-invalid':submitted && f['paterno'].errors }">
+        <span style="position:absolute; right:8px;top:8px;" class="fa fa-address-card fa-2x"></span>
+        <div *ngIf="submitted && f['paterno'].errors" class="invalid-feedback">
+            <div *ngIf="f['paterno'].errors['required']">Debes introducir tu apellido.</div>
+        </div>
+    </div>
+    <div class="input-group input-group-lg mt-4 mb-4">
+        <input type="text" [(ngModel)]="persona.materno" formControlName="materno" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="materno"
+            placeholder="Apellido Materno" [ngClass]="{ 'is-invalid':submitted && f['materno'].errors }">
+        <span style="position:absolute; right:8px;top:8px;" class="fa fa-address-card fa-2x"></span>
+        <div *ngIf="submitted && f['materno'].errors" class="invalid-feedback">
+            <div *ngIf="f['materno'].errors['required']">Debes introducir tu apellido.</div>
+        </div>
+    </div>
+    <div class="input-group input-group-lg mt-4 mb-4">
+        <input type="text" [(ngModel)]="persona.telefono" formControlName="telefono" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="paterno"
+            placeholder="Teléfono" [ngClass]="{ 'is-invalid':submitted && f['telefono'].errors }">
+        <span style="position:absolute; right:8px;top:8px;" class="fa fa-address-card fa-2x"></span>
+        <div *ngIf="submitted && f['telefono'].errors" class="invalid-feedback">
+            <div *ngIf="f['telefono'].errors['required']">Debes introducir tu teléfono.</div>
+        </div>
+    </div>
+    <div class="input-group input-group-lg mt-4 mb-4">
+        <input type="text" [(ngModel)]="persona.edad" formControlName="edad" class="form-control"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="edad"
+            placeholder="Edad" [ngClass]="{ 'is-invalid':submitted && f['edad'].errors }">
+        <span style="position:absolute; right:8px;top:8px;" class="fa fa-address-card fa-2x"></span>
+        <div *ngIf="submitted && f['edad'].errors" class="invalid-feedback">
+            <div *ngIf="f['edad'].errors['required']">Debes introducir tu edad.</div>
+        </div>
+    </div>
+    <div class="text-center form-group">
+        <button type="submit" class="btn btn-dark btn-lg" (click)="AgregarPersona()">Ingresar</button>
+        <button type="button" class="btn btn-secondary btn-lg m-5" (click)="Limpiar()">Limpiar</button>
+    </div>
+</form>

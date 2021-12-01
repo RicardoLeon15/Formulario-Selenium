@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let people of data">
+            <th scope="row">{{people.IdPersona}}</th>
+            <td>{{people.Nombre}}</td>
+            <td>{{people.Paterno}}</td>
+            <td>{{people.Materno}}</td>
+            <td>{{people.Telefono}}</td>
+            <td>{{people.Edad}}</td>
+        </tr>
+    </tbody>
+</table>
